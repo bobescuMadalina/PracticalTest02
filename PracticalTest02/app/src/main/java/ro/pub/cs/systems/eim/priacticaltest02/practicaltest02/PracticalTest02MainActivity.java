@@ -287,6 +287,7 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             String clientAddressString = clientAddress.getText().toString();
             String clientPortString    = clientPort.getText().toString();
+            result.setText("");
             if (clientAddressString == null || clientAddressString.isEmpty() ||
                     clientPortString == null || clientPortString.isEmpty()) {
                 Toast.makeText(
