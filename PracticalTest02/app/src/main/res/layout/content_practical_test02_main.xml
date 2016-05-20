@@ -12,8 +12,98 @@
     tools:context="ro.pub.cs.systems.eim.priacticaltest02.practicaltest02.PracticalTest02MainActivity"
     tools:showIn="@layout/activity_practical_test02_main">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/server_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="vertical">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="SERVER"
+             android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/server_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="PORT"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/connect_server_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CONNECT"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:id="@+id/client_layout"
+        android:layout_below="@+id/server_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLIENT"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/client_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="ADDRESS"/>
+
+
+            <EditText
+                android:id="@+id/client_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="PORT"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/get_time_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get time"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/text_view_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
 </RelativeLayout>
